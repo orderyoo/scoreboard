@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/scoreboard"
+        android:text=":"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/txt_counterUsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_toLeftOf="@+id/scoreboard"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/txt_counterCanada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_toRightOf="@+id/scoreboard"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/pngUsa"
+        android:layout_above="@+id/scoreboard"
+        android:layout_width="150sp"
+        android:layout_height="100sp"
+        app:srcCompat="@drawable/usa" />
+
+    <ImageView
+        android:id="@+id/pngCanada"
+        android:layout_above="@+id/scoreboard"
+        android:layout_width="150sp"
+        android:layout_height="100sp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/canada" />
+
+    <Button
+        android:id="@+id/ButtonUSA"
+        android:onClick="clickButtonUsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/countryUSA"
+        android:layout_below="@+id/scoreboard"/>
+    <Button
+        android:id="@+id/ButtonCanada"
+        android:onClick="clickButtonCanada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/countryCanada"
+        android:layout_below="@+id/scoreboard"/>
+    <Button
+        android:id="@+id/ButtonReset"
+        android:onClick="clickButtonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:layout_below="@+id/ButtonUSA"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
