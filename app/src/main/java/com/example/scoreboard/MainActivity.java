@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
     Integer counterForUsa = 0;
     Integer counterForCanada = 0;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         counterForCanada = savedInstanceState.getInt(KEY_COUNT);
         counterForUsa = savedInstanceState.getInt(KEY_COUNT1);
+        TextView textUsa = findViewById(R.id.txt_counterUsa);
+        TextView textCanada = findViewById(R.id.txt_counterCanada);
+        textUsa.setText(counterForUsa.toString());
+        textCanada.setText(counterForCanada.toString());
     }
     public void clickButtonUsa(View view){
         TextView textUsa = findViewById(R.id.txt_counterUsa);

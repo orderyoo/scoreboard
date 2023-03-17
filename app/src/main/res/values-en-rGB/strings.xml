@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">scoreboard</string>
+    <string name="countryUSA" translatable="false">USA</string>
+    <string name="countryCanada" translatable="false">Canada</string>
+    <string name="reset" translatable="false">Reset</string>
+</resources>
